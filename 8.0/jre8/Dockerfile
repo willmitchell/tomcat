@@ -93,5 +93,8 @@ RUN set -e \
 		exit 1; \
 	fi
 
+RUN wget https://github.com/Versent/unicreds/releases/download/1.5.1/unicreds-1.5.1_1.deb
+RUN dpkg -i unicreds-1.5.1_1.deb
+
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
